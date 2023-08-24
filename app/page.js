@@ -1,15 +1,23 @@
 import React from 'react'
 import Image from "next/image";
+import desktop1 from '../public/images/desktop-image-hero-1.jpg'
+import logo from '../public/images/logo.svg'
+import shop_arrow from '../public/images/icon-arrow.svg'
+import left_arrow from '../public/images/icon-angle-left.svg'
+import right_arrow from '../public/images/icon-angle-right.svg'
+import about_dark from '../public/images/image-about-dark.jpg'
+import about_light from '../public/images/image-about-light.jpg'
+
 
 export default function Home() {
   return (
-    <main>
+    <>
       <div className="container">
         <div className="row no-gap no-padding full-width">
           <div className="column header-image">
-            <img src="./images/desktop-image-hero-1.jpg" alt="chair" className="header-img"/>
+            <Image src="/images/desktop-image-hero-1.jpg" alt="chair" className="header-img" width={1000} height={600}/>
               <div className="logo-wrapper">
-                <img src="./images/logo.svg" alt="logo"/>
+                <Image src={logo} alt="room logo"/>
               </div>
               <div className="row">
                 <nav className="nav-row">
@@ -39,19 +47,19 @@ export default function Home() {
               <div className="row">
                 <a className="shop-btn">SHOP NOW</a>
                 <div className="shop-arrow-wrapper">
-                  <img src="images/icon-arrow.svg" className="shop-arrow"/>
+                  <Image src={shop_arrow} alt="Arrow" className="shop-arrow"/>
                 </div>
               </div>
             </div>
             <div className="row arrow-row arrow-box gap-30">
               <div className="column justify-center shrink">
                 <div className="arrow-wrapper">
-                  <img src="./images/icon-angle-left.svg" className="left-arrow"/>
+                  <Image src={left_arrow} alt="arrow" className="left-arrow"/>
                 </div>
               </div>
               <div className="column justify-center shrink">
-                <div class="arrow-wrapper">
-                  <img src="./images/icon-angle-right.svg" class="right-arrow"/>
+                <div className="arrow-wrapper">
+                  <Image src={right_arrow} alt="arrow" className="right-arrow"/>
                 </div>
               </div>
             </div>
@@ -62,7 +70,7 @@ export default function Home() {
         <div className="row full-width no-padding">
           <div className="column left-col">
             <div className="left-image-wrapper">
-              <img src="./images/image-about-dark.jpg" alt="chair"/>
+              <Image src={about_dark} alt="chair"/>
             </div>
           </div>
           <div className="column middle-col justify-center gap-20">
@@ -80,11 +88,11 @@ export default function Home() {
           </div>
           <div className="column right-col">
             <div className="right-image-wrapper">
-              <img src="images/image-about-light.jpg" alt="chair"/>
+              <Image src={about_light} alt="chair"/>
             </div>
           </div>
         </div>
       </div>
-    </main>
+    </>
   )
 }
