@@ -1,6 +1,6 @@
-import '@styles/resets.css';
-import '@styles/layout.css';
 import '@styles/styles.css';
+import '@styles/layout.css';
+import '@styles/resets.css';
 
 export const metadata = {
   title: 'Room Furniture',

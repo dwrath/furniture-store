@@ -5,7 +5,7 @@
 body{
     font-family: 'League Spartan', sans-serif;
 }
-.header-image{
+.column.header-image{
     position: relative;
     flex: 2 1 0;
 }
