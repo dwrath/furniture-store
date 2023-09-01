@@ -18,12 +18,19 @@ export default function Home() {
         '  store locator. Any questions? Don\'t hesitate to contact us today.'},{img:'/images/desktop-image-hero-3.jpg', header: 'Manufactured with the best materials', paragraph:' Our modern furniture store provide a high level of quality. Our company has invested in advanced technology \n' +
         '  to ensure that every product is made as perfect and as consistent as possible. With three decades of \n' +
         '  experience in this industry, we understand what customers want for their home and office.'}]
-  const [info, setInfo] = useState();
-  let image = data[0].img
-  let header = data[0].header
-  let paragraph = data[0].paragraph
-  function handleClick(){
-    setInfo()
+  let index = 0
+  const [info, setInfo] = useState(data[index]);
+  let image = info.img
+  let header = info.header
+  let paragraph = info.paragraph
+  function handleClick(arrowId){
+    if(arrowId == 1){
+      index--
+      if(index == -1){
+        index = 2
+      }
+      setInfo(data[index])
+    }
   }
   return (
     <>
@@ -65,12 +72,12 @@ export default function Home() {
             <div className="row arrow-row arrow-box gap-30">
               <div className="column justify-center shrink">
                 <div className="arrow-wrapper">
-                  <Image src={left_arrow} alt="arrow" className="left-arrow" onClick={handleClick}/>
+                  <Image src={left_arrow} alt="arrow" className="left-arrow" onClick={handleClick(1)}/>
                 </div>
               </div>
               <div className="column justify-center shrink">
                 <div className="arrow-wrapper">
-                  <Image src={right_arrow} alt="arrow" className="right-arrow"/>
+                  <Image src={right_arrow} alt="arrow" className="right-arrow" onClick={handleClick(2)}/>
                 </div>
               </div>
             </div>
