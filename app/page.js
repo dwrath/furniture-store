@@ -31,6 +31,13 @@ export default function Home() {
       }
       setInfo(data[index])
     }
+    if(arrowId == 2){
+      index++
+      if(index == 3){
+        index = 1
+      }
+      setInfo(data[index])
+    }
   }
   return (
     <>
