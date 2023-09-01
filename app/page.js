@@ -72,12 +72,12 @@ export default function Home() {
             <div className="row arrow-row arrow-box gap-30">
               <div className="column justify-center shrink">
                 <div className="arrow-wrapper">
-                  <Image src={left_arrow} alt="arrow" className="left-arrow" onClick={handleClick(1)}/>
+                  <Image src={left_arrow} alt="arrow" className="left-arrow" onClick={()=>handleClick(1)}/>
                 </div>
               </div>
               <div className="column justify-center shrink">
                 <div className="arrow-wrapper">
-                  <Image src={right_arrow} alt="arrow" className="right-arrow" onClick={handleClick(2)}/>
+                  <Image src={right_arrow} alt="arrow" className="right-arrow" onClick={()=>handleClick(2)}/>
                 </div>
               </div>
             </div>
