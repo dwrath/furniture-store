@@ -18,24 +18,28 @@ export default function Home() {
         '  store locator. Any questions? Don\'t hesitate to contact us today.'},{img:'/images/desktop-image-hero-3.jpg', header: 'Manufactured with the best materials', paragraph:' Our modern furniture store provide a high level of quality. Our company has invested in advanced technology \n' +
         '  to ensure that every product is made as perfect and as consistent as possible. With three decades of \n' +
         '  experience in this industry, we understand what customers want for their home and office.'}]
-  let index = 0
+ let [index, setIndex] = useState(0)
   const [info, setInfo] = useState(data[index]);
   let image = info.img
   let header = info.header
   let paragraph = info.paragraph
   function handleClick(arrowId){
-    if(arrowId == 1){
-      index--
+    if(arrowId === 1){
+      setIndex(index--)
       if(index == -1){
         index = 2
+        setIndex(index)
       }
+      setIndex(index)
       setInfo(data[index])
     }
-    if(arrowId == 2){
-      index++
+    if(arrowId === 2){
+      setIndex(index++)
       if(index == 3){
-        index = 1
+        index = 0
+        setIndex(index)
       }
+      setIndex(index)
       setInfo(data[index])
     }
   }
